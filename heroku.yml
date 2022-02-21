@@ -1,3 +1,8 @@
-build:
-  docker:
-    web: Dockerfile
+圖標 ： https ： //apps.okteto.com/movies/icon.png 
+部署 ： 
+  - okteto 構建 - t okteto.dev/api : $ { OKTETO_GIT_COMMIT } api 
+  - okteto 構建 - t okteto.dev/frontend : $ { OKTETO_GIT_COMMIT } 前端 
+  - helm 升級 - - 安裝電影圖表 - - set tag=$ { OKTETO_GIT_COMMIT } 
+開發人員 ： 
+  - api/octeto.yml 
+  - 前端/okteto.yml 
